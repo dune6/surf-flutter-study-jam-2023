@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:surf_flutter_study_jam_2023/features/ticket_storage/ticket_storage_page.dart';
+import 'package:surf_flutter_study_jam_2023/features/ticket_storage/screens/ticket_storage_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -12,7 +12,8 @@ class App extends StatelessWidget {
         // primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const TicketStoragePage(),
+      routes: {'tickets': (_) => TicketStoragePage.create()},
+      home: TicketStoragePage.create(),
     );
   }
 }
