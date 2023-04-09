@@ -11,16 +11,18 @@ class TicketStoragePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(TicketStorageStrings.appBarTitle),
         ),
-        floatingActionButton: ElevatedButton(
-          onPressed: () {},
-          child: const Text(TicketStorageStrings.floatingActionButtonTitle,
-              style: TextStyle(fontWeight: FontWeight.bold)),
+        floatingActionButton: SizedBox(
+          height: 60,
+          child: FloatingActionButton.extended(
+            onPressed: () {},
+            label: const Text(TicketStorageStrings.floatingActionButtonTitle),
+          ),
         ),
         body: const SafeArea(
           child: Center(
               child: Text(
             TicketStorageStrings.emptyPageTitle,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18),
           )),
         ));
   }
